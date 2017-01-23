@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This plug-in extends DITA-OT HTML5 processing with a custom CSS file. -->
+<project name="com.example.html5.custom.css">
+  <target name="dita2html5-custom-css">
+    <antcall target="dita2html5">
+      <!-- Custom .css file used to style output -->
+      <param name="args.css" value="${dita.plugin.com.example.html5.custom.css.dir}/css/custom.css"/>
+      <!-- Copy the custom .css file to the output directory -->
+      <param name="args.copycss" value="yes"/>
+      <!-- Location of the copied .css file relative to the output -->
+      <param name="args.csspath" value="css"/>
+    </antcall>
+  </target>
+</project>
